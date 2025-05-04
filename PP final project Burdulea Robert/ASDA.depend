@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1704659320 source:c:\users\burdu\documents\info\asda\main.cpp
+	<iostream>
+	<math.h>
+	<fstream>
+
+1746358776 source:c:\users\burdu\documents\info\asda\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1746358852 source:c:\users\burdu\documents\info\asda\history.in.c
+
