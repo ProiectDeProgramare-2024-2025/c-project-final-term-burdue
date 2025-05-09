@@ -146,9 +146,26 @@ void playGame() {
     printf("=== Play Game ===\n");
 
     char name[MAX_NAME_LEN];
-    printf("Enter your name: ");
-    scanf("%s", name);
-    getchar();
+    int valid = 0;
+
+    // Input and validate name
+    while (!valid) {
+        printf("Enter your name (letters only): ");
+        scanf("%s", name);
+        getchar();
+
+        valid = 1;
+        for (int i = 0; name[i] != '\0'; i++) {
+            if (!isalpha(name[i])) {
+                valid = 0;
+                break;
+            }
+        }
+
+        if (!valid) {
+            printf(RED "Invalid input. Please use letters only.\n" RESET);
+        }
+    }
 
     float score = 0;
     for (int i = 0; i < totalQuestions; i++) {
@@ -197,6 +214,7 @@ void playGame() {
     saveHistory(name, score);
     pauseAndClear();
 }
+
 
 void showMainMenu() {
     int choice;
